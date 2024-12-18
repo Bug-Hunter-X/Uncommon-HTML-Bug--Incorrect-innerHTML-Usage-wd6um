@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Incorrect use of innerHTML with a non-existent element id
+    document.getElementById("nonExistentElement").innerHTML = "This text will not show.";
+    //Correct use of innerHTML
+    document.getElementById("myDiv").innerHTML += "<p>This text will be appended.</p>"; 
+  </script>
+</body>
+</html>
